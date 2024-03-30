@@ -1,0 +1,58 @@
+{%extends "App/index.html" %}
+
+{%block titulo %}
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Nexter- Ropa a otro nivel</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Nuestra seleccion de pantalones</p>
+                </div>
+            </div>
+        </header>
+        {%endblock titulo %}
+
+
+{% block contenido %}
+
+<table>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="m-0">Pantalones</h2>
+        <a href="{% url 'pantalonescreate' %}" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Agrega una publicacion</a>
+    </div>
+            
+    
+</table>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Marca</th>
+            <th>Acciones</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+    {% for x in pantalon_list  %}
+        <tr>
+            <td>{{ x.nombre }}</td>
+            <td>{{ x.precio }}</td>
+            <td>{{ x.marca }}</td>
+            <td>
+                <a href="{% url 'pantalonesupdate' x.id %}" class="btn btn-outline-primary btn-sm me-2" title="Editar Registro">
+                    <i class="bi bi-pencil"></i>
+                </a>
+                
+                <a href="{% url 'pantalonesdelete' x.id %}" class="btn btn-outline-danger btn-sm" title="Eliminar Registro">
+                    <i class="bi bi-trash"></i>
+                </a>             
+            </td>  
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+

@@ -1,0 +1,51 @@
+{%extends "App/index.html" %}
+
+{%block titulo%}
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Sobre Mi</h1>
+            <p class="lead fw-normal text-white-50 mb-0">una breve descripcion del creador de esta pagina </p>
+        </div>
+    </div>
+</header>
+{%endblock titulo%}
+
+{%block contenido%}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Gracias por estar corrigiendo este proyecto final!</h1>
+        <p>Mi nombre es Dante, tengo 18 años y actualmente estoy en primer año de la Carrera de Ciencias Físicas en la UBA.</p>
+        <p>Comencé este curso como una introducción a Python ya que sabía que lo necesitaría durante la carrera. Realmente está comenzando a servirme, aunque al principio no tenía idea de que estaba enfocado al desarrollo web, así que me costó ponerme al día al final del curso.</p>
+        <p>Disfruté y aprendí mucho del curso, aunque una de mis mayores dificultades fue mi falta de conocimiento en HTML. Creo que podría haber creado una página mucho más atractiva si hubiera tenido conocimientos previos en ese sentido.</p>
+    </div>
+</body>
+</html>
+{%endblock%}
